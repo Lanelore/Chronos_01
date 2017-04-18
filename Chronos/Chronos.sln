@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronos", "Chronos.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronos.Editor.Plugins", "Chronos.Editor.Plugins.csproj", "{448ECFBA-110F-3A60-86ED-651C68164B05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronos.Editor", "Chronos.Editor.csproj", "{5AD6392F-D9BC-396E-8094-F8B961308E36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{448ECFBA-110F-3A60-86ED-651C68164B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{448ECFBA-110F-3A60-86ED-651C68164B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{448ECFBA-110F-3A60-86ED-651C68164B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD6392F-D9BC-396E-8094-F8B961308E36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD6392F-D9BC-396E-8094-F8B961308E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD6392F-D9BC-396E-8094-F8B961308E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD6392F-D9BC-396E-8094-F8B961308E36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
