@@ -116,6 +116,8 @@
     <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Block HL.shader" />
+    <None Include="Assets\Block.shader" />
     <None Include="Assets\Colr\DemoScenes\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Colr\DemoScenes\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
     <None Include="Assets\Colr\DemoScenes\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
@@ -147,7 +149,6 @@
     <None Include="Assets\Colr\Shaders\MasterShader.shader" />
     <None Include="Assets\Colr\Shaders\MasterShaderLocalSpace.shader" />
     <None Include="Assets\Colr\Shaders\ScreenColorTransition.shader" />
-    <None Include="Assets\Gem\Shaders\Gem HL.shader" />
     <None Include="Assets\Gem\Shaders\Gem.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\ExtractChannel.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\FillColor.shader" />

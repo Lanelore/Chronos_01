@@ -6,22 +6,32 @@ public class ThrowObject : MonoBehaviour
     public Transform player;
     public Transform playerCam;
     public float throwForce = 10;
-    public bool hasPlayer = false; // the item is within the player's reach
-    public bool beingCarried = false; // currently in the process of being picked up or carried around
-    public bool canThrow = false; // the player is no longer pressing the Action button, the pickup process has stopped or is finished
+    private bool hasPlayer = false; // the item is within the player's reach
+    private bool beingCarried = false; // currently in the process of being picked up or carried around
+    private bool canThrow = false; // the player is no longer pressing the Action button, the pickup process has stopped or is finished
     private bool touched = false; // the item touched a wall
+    private bool highlight = false; // highlight the item when it's possible to pick it up
+    private Material materialNormal;
+    public Material materialHL;
+
+    private void Start()
+    {
+        materialNormal = gameObject.GetComponent<Renderer>().material;
+    }
 
     void Update()
     {
+        Material currentMaterial = gameObject.GetComponent<Renderer>().material;
         float dist = Vector3.Distance(gameObject.transform.position, player.position);
         if (dist <= 2.5f && gameObject.GetComponent<Renderer>().isVisible)
         {
             hasPlayer = true;
         }
-        else
+        else if (hasPlayer)
         {
             hasPlayer = false;
         }
+
         if (hasPlayer && Input.GetButtonDown("Action"))
         {
             GetComponent<Rigidbody>().isKinematic = true;
@@ -67,6 +77,17 @@ public class ThrowObject : MonoBehaviour
                 transform.parent = null;
                 beingCarried = false;
             }
+        }
+
+        highlight = hasPlayer && !canThrow;
+
+        if (highlight && currentMaterial != materialHL)
+        {
+            gameObject.GetComponent<Renderer>().material = materialHL;
+        }
+        else if (!highlight && currentMaterial != materialNormal)
+        {
+            gameObject.GetComponent<Renderer>().material = materialNormal;
         }
     }
 
