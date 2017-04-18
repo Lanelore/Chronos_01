@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronos.Plugins", "Chronos.Plugins.csproj", "{381222BF-2C51-3A9A-4A47-D402D874EB75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronos", "Chronos.csproj", "{2DA18012-EA6B-FAED-3EAF-4C175FE60D70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronos.Editor.Plugins", "Chronos.Editor.Plugins.csproj", "{448ECFBA-110F-3A60-86ED-651C68164B05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{381222BF-2C51-3A9A-4A47-D402D874EB75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381222BF-2C51-3A9A-4A47-D402D874EB75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381222BF-2C51-3A9A-4A47-D402D874EB75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381222BF-2C51-3A9A-4A47-D402D874EB75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA18012-EA6B-FAED-3EAF-4C175FE60D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA18012-EA6B-FAED-3EAF-4C175FE60D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA18012-EA6B-FAED-3EAF-4C175FE60D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA18012-EA6B-FAED-3EAF-4C175FE60D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448ECFBA-110F-3A60-86ED-651C68164B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448ECFBA-110F-3A60-86ED-651C68164B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448ECFBA-110F-3A60-86ED-651C68164B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448ECFBA-110F-3A60-86ED-651C68164B05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
