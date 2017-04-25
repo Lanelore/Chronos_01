@@ -45,7 +45,7 @@ public class ThrowObject : MonoBehaviour
                 gameObject.transform.position = hoverPosition;
             }
             */
-            gameObject.transform.position = gameObject.transform.position + Vector3.up * 0.1f;
+            gameObject.transform.position = gameObject.transform.position + Vector3.up * 0.2f;
             transform.parent = playerCam;
             beingCarried = true;
         }
@@ -69,13 +69,15 @@ public class ThrowObject : MonoBehaviour
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
-                GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce);
             }
-            else if (Input.GetMouseButtonDown(1)) //right click, 0 is left click
+            // else if (Input.GetMouseButtonDown(1)) //right click, 0 is left click
+            else if (canThrow && beingCarried && Input.GetButtonDown("Throw"))
             {
+                canThrow = false;
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
+                GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce * 50);
             }
         }
 
