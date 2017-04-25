@@ -31,7 +31,7 @@ public class ThrowObject : MonoBehaviour
         {
             hasPlayer = false;
         }
-
+        
         if (hasPlayer && Input.GetButtonDown("Action"))
         {
             GetComponent<Rigidbody>().isKinematic = true;
@@ -45,6 +45,7 @@ public class ThrowObject : MonoBehaviour
                 gameObject.transform.position = hoverPosition;
             }
             */
+
             gameObject.transform.position = gameObject.transform.position + Vector3.up * 0.2f;
             transform.parent = playerCam;
             beingCarried = true;
@@ -77,7 +78,7 @@ public class ThrowObject : MonoBehaviour
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
-                GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce * 50);
+                GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce * 10);
             }
         }
 
