@@ -97,6 +97,7 @@
     <Compile Include="Assets\Colr\Scripts\ScreenColorTransition.cs" />
     <Compile Include="Assets\GemExample\Scripts\DemoTimeOfDay.cs" />
     <Compile Include="Assets\GemExample\Scripts\Orbit.cs" />
+    <Compile Include="Assets\ManipulateTime.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
