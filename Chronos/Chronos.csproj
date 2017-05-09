@@ -104,6 +104,7 @@
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
     <Compile Include="Assets\SpawnPosition.cs" />
     <Compile Include="Assets\ThrowObject.cs" />
+    <Compile Include="Assets\TimeDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Block HL.shader" />

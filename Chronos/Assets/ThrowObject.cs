@@ -13,10 +13,12 @@ public class ThrowObject : MonoBehaviour
     private bool highlight = false; // highlight the item when it's possible to pick it up
     private Material materialNormal;
     public Material materialHL;
+    ManipulateTime manipulateTime;
 
     private void Start()
     {
         materialNormal = gameObject.GetComponent<Renderer>().material;
+        manipulateTime = gameObject.GetComponent<ManipulateTime>();
     }
 
     void Update()
@@ -32,7 +34,7 @@ public class ThrowObject : MonoBehaviour
             hasPlayer = false;
         }
         
-        if (hasPlayer && Input.GetButtonDown("Action"))
+        if (hasPlayer && Input.GetButtonDown("Action") && beingCarried == false)
         {
             GetComponent<Rigidbody>().isKinematic = true;
             /*
@@ -49,10 +51,6 @@ public class ThrowObject : MonoBehaviour
             gameObject.transform.position = gameObject.transform.position + Vector3.up * 0.3f;
             transform.parent = playerCam;
             beingCarried = true;
-
-            ManipulateTime mt = gameObject.GetComponent<ManipulateTime>();
-            print("time " + mt.time);
-            mt.time = 1;
         }
         if (beingCarried)
         {
@@ -63,6 +61,7 @@ public class ThrowObject : MonoBehaviour
                 beingCarried = false;
                 canThrow = false;
                 touched = false;
+                manipulateTime.updateTime();
             }
             if (Input.GetButtonUp("Action") && beingCarried)
             {
@@ -74,6 +73,7 @@ public class ThrowObject : MonoBehaviour
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
+                manipulateTime.updateTime();
             }
             // else if (Input.GetMouseButtonDown(1)) //right click, 0 is left click
             else if (canThrow && beingCarried && Input.GetButtonDown("Throw"))
@@ -83,6 +83,7 @@ public class ThrowObject : MonoBehaviour
                 transform.parent = null;
                 beingCarried = false;
                 GetComponent<Rigidbody>().AddForce(playerCam.forward * throwForce * 10);
+                manipulateTime.updateTime();
             }
         }
 

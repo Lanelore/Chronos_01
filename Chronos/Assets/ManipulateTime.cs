@@ -47,7 +47,6 @@ public class ManipulateTime : MonoBehaviour {
 
     public void PauseGame()
     {
-        print("Pause Game Now");
         toPause = false;
 
         if (an != null)
@@ -64,7 +63,6 @@ public class ManipulateTime : MonoBehaviour {
 
     public void ResumeGame()
     {
-        print("Resume");
         toResume = false;
 
         if (an != null)
@@ -76,6 +74,18 @@ public class ManipulateTime : MonoBehaviour {
             rb.isKinematic = false;
             rb.AddForce(savedVelocity, ForceMode.VelocityChange);
             rb.AddTorque(savedAngularVelocity, ForceMode.VelocityChange);
+        }
+    }
+
+    public void updateTime()
+    {
+        if (time == 1)
+        {
+            ResumeGame();
+        }
+        else if (time == 0)
+        {
+            PauseGame();
         }
     }
 }
