@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene01.unity
+- path: D:/GitHub/pro4_v04/Base2/Assets/Scenes/Level 1.unity
   isLoaded: 1
   isActive: 1
