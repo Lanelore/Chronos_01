@@ -1,0 +1,9 @@
+Lukas Mathä
+Bianca Zankl
+
+WASD 	Movement
+Mouse	Camera
+Space	Jump
+E	Pick up and put down
+Q	Throw
+LMB	Freeze und unfreeze time
