@@ -46,9 +46,13 @@ public class ThrowObject : MonoBehaviour
             }
             */
 
-            gameObject.transform.position = gameObject.transform.position + Vector3.up * 0.2f;
+            gameObject.transform.position = gameObject.transform.position + Vector3.up * 0.3f;
             transform.parent = playerCam;
             beingCarried = true;
+
+            ManipulateTime mt = gameObject.GetComponent<ManipulateTime>();
+            print("time " + mt.time);
+            mt.time = 1;
         }
         if (beingCarried)
         {

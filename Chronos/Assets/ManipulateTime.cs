@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ManipulateTime : MonoBehaviour {
 
-    private float time = 1;
+    public float time = 1;
     private Vector3 savedVelocity;
     private Vector3 savedAngularVelocity;
     private Rigidbody rb;
     private Animator an;
+    public bool toPause = false;
+    public bool toResume = false;
 
     // Use this for initialization
     void Start () {
@@ -17,41 +19,63 @@ public class ManipulateTime : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        if (Input.GetButtonDown("Freeze") && time != 0)
-        {
-            time = 0;
-            PauseGame();
-        }
-        else if (Input.GetButtonDown("Freeze") && time == 0)
+	void Update ()
+    {
+        if (Input.GetButtonDown("Freeze") && time != 1)
         {
             time = 1;
-            ResumeGame();
+            toResume = true;
         }
-
+        else if (Input.GetButtonDown("Freeze") && time != 0)
+        {
+            time = 0;
+            toPause = true;
+        }
     }
 
-    void PauseGame()
+    void FixedUpdate()
     {
-        savedVelocity = rb.velocity;
-        savedAngularVelocity = rb.angularVelocity;
-        rb.isKinematic = true;
+        if (toPause && time == 0)
+        {
+            PauseGame();
+        }
+        else if (toResume && time != 0)
+        {
+            ResumeGame();
+        }
+    }
+
+    public void PauseGame()
+    {
+        print("Pause Game Now");
+        toPause = false;
 
         if (an != null)
         {
             an.enabled = false;
         }
+        else
+        {
+            savedVelocity = rb.velocity;
+            savedAngularVelocity = rb.angularVelocity;
+            rb.isKinematic = true;
+        }
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
-        rb.isKinematic = false;
-        rb.AddForce(savedVelocity, ForceMode.VelocityChange);
-        rb.AddTorque(savedAngularVelocity, ForceMode.VelocityChange);
+        print("Resume");
+        toResume = false;
 
         if (an != null)
         {
             an.enabled = true;
+        }
+        else
+        {
+            rb.isKinematic = false;
+            rb.AddForce(savedVelocity, ForceMode.VelocityChange);
+            rb.AddTorque(savedAngularVelocity, ForceMode.VelocityChange);
         }
     }
 }

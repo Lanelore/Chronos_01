@@ -20,15 +20,8 @@ public class Respawn : MonoBehaviour {
         SpawnPosition spawnPos = other.gameObject.GetComponent<SpawnPosition>();
         if (spawnPos)
         {
-            print("Current 1: " + other.gameObject.transform.rotation.eulerAngles.y);
-            print("Start: " + spawnPos.spawnRotation.y);
-
             other.gameObject.transform.position = spawnPos.spawnPosition;
             other.gameObject.transform.rotation = Quaternion.Euler(spawnPos.spawnRotation);
-            
-            print("Current 2: " + other.gameObject.transform.rotation.eulerAngles.y);
-            print("Start: " + spawnPos.spawnRotation.y);
-
             Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
