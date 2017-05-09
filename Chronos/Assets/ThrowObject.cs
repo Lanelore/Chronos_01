@@ -7,7 +7,7 @@ public class ThrowObject : MonoBehaviour
     public Transform playerCam;
     public float throwForce = 10;
     private bool hasPlayer = false; // the item is within the player's reach
-    private bool beingCarried = false; // currently in the process of being picked up or carried around
+    public bool beingCarried = false; // currently in the process of being picked up or carried around
     private bool canThrow = false; // the player is no longer pressing the Action button, the pickup process has stopped or is finished
     private bool touched = false; // the item touched a wall
     private bool highlight = false; // highlight the item when it's possible to pick it up

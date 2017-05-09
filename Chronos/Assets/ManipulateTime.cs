@@ -35,6 +35,10 @@ public class ManipulateTime : MonoBehaviour {
 
     void FixedUpdate()
     {
+        ThrowObject throwObject = gameObject.GetComponent<ThrowObject>();
+        if (throwObject && throwObject.beingCarried)
+            return;        
+
         if (toPause && time == 0)
         {
             PauseGame();
@@ -79,6 +83,9 @@ public class ManipulateTime : MonoBehaviour {
 
     public void updateTime()
     {
+        savedVelocity = Vector3.zero;
+        savedAngularVelocity = Vector3.zero;
+
         if (time == 1)
         {
             ResumeGame();
