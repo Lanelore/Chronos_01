@@ -29,28 +29,9 @@ public class FirstPersonController : MonoBehaviour {
 	public float jumpDamping = 3.5f; // reduced movement while jumping
 	public LayerMask groundedMask; //mask for raytracing/jumping - reference plane for the raycast#
 
-	// ---- jump width tests
-	public float jumpHeight = 0;
-	public float jumpWidth = 0;
-	private Vector3 jumpStart;
-	private Vector3 jumpEnd;
-	private Vector3 lastPos = new Vector3(0,0,0);
-	private float timePassed = 0;
-	public float speed = 0;
-	public bool inAir;
-	public bool debug = true;
-
 	// General Audio
 	private AudioSource walk;
     private AudioSource jump;
-	private Queue<float> walkingDistanceQueue;
-
-    [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-    [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
-    [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
-    
-    private Vector3 previousPosition;
-	private float timeSinceLastButtonAudioPlay = 0.0f;
 
 	// System vars
 	public bool grounded;
@@ -69,14 +50,6 @@ public class FirstPersonController : MonoBehaviour {
 		Cursor.visible = false;
 		Screen.lockCursor = true;
 		cameraTransform = Camera.main.transform;
-		previousPosition = transform.position;
-		walkingDistanceQueue = new Queue<float> ();
-		walkingDistanceQueue.Enqueue (0.0f);
-		walkingDistanceQueue.Enqueue (0.0f);
-		walkingDistanceQueue.Enqueue (0.0f);
-		walkingDistanceQueue.Enqueue (0.0f);
-		walkingDistanceQueue.Enqueue (0.0f);
-
         var audioSources = GetComponents<AudioSource>();
         this.walk = audioSources[0];
         this.jump = audioSources[1];
@@ -108,8 +81,7 @@ public class FirstPersonController : MonoBehaviour {
 		} else {
 			this.walk.Stop ();
 		}
-
-		timeSinceLastButtonAudioPlay += Time.deltaTime;
+        
 		// set dampig dependend if grounded or not
 		float damping;
 		if (IsGrounded()) {
@@ -133,16 +105,8 @@ public class FirstPersonController : MonoBehaviour {
 		moveAmount = Vector3.SmoothDamp (moveAmount, targetMoveAmount, ref smoothMoveVelocity, 0.15f * damping); //ref allows to modify a global variable
 		
 		// Jump
-		if (debug && inAir && GetComponent<Rigidbody> ().position.y <= 1.0001f) {
-			inAir = false;
-			jumpEnd = GetComponent<Rigidbody> ().position; //-----------
-			jumpWidth = (jumpEnd - jumpStart).magnitude;
-		}
-		
 		if (Input.GetButtonDown("Jump") && jumpCD <= 0) {
 			if (IsGrounded()) {
-				jumpStart = GetComponent<Rigidbody>().position; //-----------
-				inAir = true;
 				GetComponent<Rigidbody>().AddForce(transform.up * jumpForce);
 
                 // also play audio sound
@@ -177,22 +141,24 @@ public class FirstPersonController : MonoBehaviour {
 	
 	bool IsGrounded ()
 	{
-		//Physics.Raycast(ray, out hit, 1 + .2f, groundedMask
+        //Debug.DrawRay(transform.position, -transform.up, Color.red, 0.1f);
 		bool ground = Physics.Raycast (transform.position, - transform.up, 1 + 0.3f, groundedMask);
-		return (ground || IsStairGrounded ()); //letzter Parameter groundedMask
+        print("ground " + ground + "; stairground " + IsStairGrounded());
+        grounded = (ground || IsStairGrounded());
+        return grounded; //letzter Parameter groundedMask
 	}
 
 	bool IsStairGrounded(){ 
 		Vector3 second  = transform.position;
 		second.x += 0.05F;
-		if (Physics.Raycast (transform.position, -transform.up, out stairRaycast, 1.5F) &&
+		if (Physics.Raycast (transform.position, -transform.up, out stairRaycast, 2.5F) &&
 		        (stairRaycast.collider.gameObject.tag == "Stair")) {
 				firstStairCast = true;
 		} else {
 			firstStairCast = false;
 		}
 
-		if (Physics.Raycast (second, -transform.up, out stairRaycast2, 1.5F) &&
+		if (Physics.Raycast (second, -transform.up, out stairRaycast2, 2.5F) &&
 		    (stairRaycast2.collider.gameObject.tag == "Stair")) {
 			secondStairCast = true;
 		}else{
@@ -213,33 +179,9 @@ public class FirstPersonController : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.transform.tag == "Enemy")
-		{
-			FadeDie();
-		}
 		if (other.transform.tag == "Goal")
 		{
 			//manager.CompleteLevel();
 		}
-	}
-
-	public void FadeDie()
-	{	
-		//BlackFades.FadeInOut (1.0f, 1.0f, Color.black);
-		Invoke ("Die", 1.0f);
-	}
-
-	public void Die()
-	{	
-		transform.GetComponent<Rigidbody> ().velocity = new Vector3 (0,0,0);	
-		
-		//BlackFades.FadeIn (1, Color.black);
-	}
-	
-	public void ChangeMouseSensitivity(float sensitivity){
-		mouseSensitivityX = sensitivity;
-		mouseSensitivityY = sensitivity;
-		string sensitivityString = sensitivity.ToString ();	
-		PlayerPrefs.SetFloat("Sensitivity", sensitivity);
 	}
 }
