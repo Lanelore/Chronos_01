@@ -19,9 +19,6 @@ public class FirstPersonController : MonoBehaviour {
 
 	// references
 	//public GameManager manager;
-	private Vector3 spawn;
-	public Vector3 spawnGravity = new Vector3(0,1,0);
-	public Quaternion spawnRotation;
 	
 	// public vars
 	public float mouseSensitivityX = 250;
@@ -44,14 +41,19 @@ public class FirstPersonController : MonoBehaviour {
 	public bool debug = true;
 
 	// General Audio
-	private AudioSource audioSource;
-	private GeneralAudioFiles audioFiles;
+	private AudioSource walk;
+    private AudioSource jump;
 	private Queue<float> walkingDistanceQueue;
-	private Vector3 previousPosition;
+
+    [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
+    [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
+    [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+    
+    private Vector3 previousPosition;
 	private float timeSinceLastButtonAudioPlay = 0.0f;
 
 	// System vars
-	bool grounded;
+	public bool grounded;
 	Vector3 moveAmount;
 	Vector3 smoothMoveVelocity;
 	float verticalLookRotation;
@@ -67,7 +69,6 @@ public class FirstPersonController : MonoBehaviour {
 		Cursor.visible = false;
 		Screen.lockCursor = true;
 		cameraTransform = Camera.main.transform;
-		spawn = transform.position;
 		previousPosition = transform.position;
 		walkingDistanceQueue = new Queue<float> ();
 		walkingDistanceQueue.Enqueue (0.0f);
@@ -76,45 +77,12 @@ public class FirstPersonController : MonoBehaviour {
 		walkingDistanceQueue.Enqueue (0.0f);
 		walkingDistanceQueue.Enqueue (0.0f);
 
-		this.audioSource = GetComponent<AudioSource> ();
-		this.audioFiles = GetComponent<GeneralAudioFiles> ();
-
-		spawnRotation = transform.rotation;
-	}
-
-	private void OnGUI()
-	{
-		// Draw the title.
-		//GuiHelpers.DrawText("CALIBRATION", new Vector2(10, 10), 36, GuiHelpers.Magenta);
-		/*if (GUI.Button(new Rect(10, 70, 150, 30), "Recalibrate"))
-		{
-
-		}*/
-
-		//GUI.Box (new Rect (10, 70, 150, 30), "You have been inactive for quite a while. Game will reset automatically soon.");
-
+        var audioSources = GetComponents<AudioSource>();
+        this.walk = audioSources[0];
+        this.jump = audioSources[1];
 	}
 
 	void Update() {
-		// test for footstep sound
-		/*
-		Vector3 distance = transform.position - previousPosition;
-		previousPosition = transform.position;
-
-		// enqueue the current distance
-		walkingDistanceQueue.Enqueue (distance.magnitude);
-
-		// sum up the walking Distance
-		float[] walkingDistanceArray = walkingDistanceQueue.ToArray ();
-		float totalWalkingDistance = 0.0f;
-		foreach (float walkingDistance in walkingDistanceArray) {
-			totalWalkingDistance += walkingDistance;
-		}
-
-		// calculate average
-		float averageWalkingDistance = totalWalkingDistance / walkingDistanceQueue.Count;
-*/
-
 		// check if player was inactive
 		float thisMouseX = Input.GetAxis ("Mouse X");
 		float thisMouseY = Input.GetAxis ("Mouse Y");
@@ -132,21 +100,14 @@ public class FirstPersonController : MonoBehaviour {
 			//AutoFade.LoadLevel("Central" , 1, 1, Color.black);
 		}
 
-
-
-
 		// play the walking sound if player walked enough
 		if (IsGrounded() && ((Input.GetAxisRaw("Vertical")!= 0) || Input.GetAxisRaw("Horizontal")!= 0)) {
-			if (audioSource.isPlaying == false) {
-				this.audioSource.Play ();
+			if (walk.isPlaying == false) {
+				this.walk.Play ();
 			}
 		} else {
-			this.audioSource.Stop ();
+			this.walk.Stop ();
 		}
-
-		// dequeue a walkingdistance
-//		walkingDistanceQueue.Dequeue ();
-
 
 		timeSinceLastButtonAudioPlay += Time.deltaTime;
 		// set dampig dependend if grounded or not
@@ -184,31 +145,12 @@ public class FirstPersonController : MonoBehaviour {
 				inAir = true;
 				GetComponent<Rigidbody>().AddForce(transform.up * jumpForce);
 
-				// also play audio sound
-				//AudioManager.instance.playSoundEffect(audioFiles.jumpSound);
+                // also play audio sound
+                this.jump.Play();
 
-				jumpCD = 0.3F;
+                jumpCD = 0.3F;
 			}
 		}
-
-		//----------------
-		if (debug) {
-			if (Time.time > 3 && jumpHeight <= GetComponent<Rigidbody> ().position.y - 1) { //-----------
-				jumpHeight = GetComponent<Rigidbody> ().position.y - 1; 
-			}
-			
-			if (timePassed >= 1) {
-				speed = (transform.position - lastPos).magnitude / timePassed;
-				timePassed = 0;
-				lastPos = transform.position;
-			}
-			timePassed += Time.deltaTime;
-		}
-
-
-
-
-		/////////
 
 		if (IsGrounded () && ((Input.GetAxisRaw("Vertical")!= 0) || Input.GetAxisRaw("Horizontal")!= 0)) {
 			if (upwards) {
@@ -244,14 +186,14 @@ public class FirstPersonController : MonoBehaviour {
 		Vector3 second  = transform.position;
 		second.x += 0.05F;
 		if (Physics.Raycast (transform.position, -transform.up, out stairRaycast, 1.5F) &&
-		        (stairRaycast.collider.gameObject.name == "Slope Collider")) {
+		        (stairRaycast.collider.gameObject.tag == "Stair")) {
 				firstStairCast = true;
 		} else {
 			firstStairCast = false;
 		}
 
 		if (Physics.Raycast (second, -transform.up, out stairRaycast2, 1.5F) &&
-		    (stairRaycast2.collider.gameObject.name == "Slope Collider")) {
+		    (stairRaycast2.collider.gameObject.tag == "Stair")) {
 			secondStairCast = true;
 		}else{
 			secondStairCast = false;
@@ -279,36 +221,16 @@ public class FirstPersonController : MonoBehaviour {
 		{
 			//manager.CompleteLevel();
 		}
-		if (other.transform.tag == "SavePoint")
-		{
-			spawn = other.transform.position;
-			//spawnGravity = transform.GetComponent<GravityBody>().gravityUp;
-			spawnRotation = transform.rotation;
-		}
-	}
-
-	void OnTriggerStay(Collider other)
-	{
-		if (other.transform.tag == "SavePoint")
-		{
-			spawn = other.transform.position;
-			//spawnGravity = transform.GetComponent<GravityBody>().gravityUp;
-			spawnRotation = transform.rotation;
-		}
 	}
 
 	public void FadeDie()
 	{	
 		//BlackFades.FadeInOut (1.0f, 1.0f, Color.black);
 		Invoke ("Die", 1.0f);
-
 	}
 
 	public void Die()
 	{	
-		//transform.GetComponent<GravityBody> ().gravityUp = spawnGravity;
-		transform.rotation = spawnRotation;
-		transform.position = spawn;
 		transform.GetComponent<Rigidbody> ().velocity = new Vector3 (0,0,0);	
 		
 		//BlackFades.FadeIn (1, Color.black);
