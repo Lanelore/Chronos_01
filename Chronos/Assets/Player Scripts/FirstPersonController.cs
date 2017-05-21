@@ -13,7 +13,6 @@ public class FirstPersonController : MonoBehaviour {
 	// head bob movement
 	float minimum = 0.624F;
 	float maximum = 0.67F;
-	float time = 0;
 	float duration = 3.2F;
 	bool upwards = true;
 
@@ -122,14 +121,12 @@ public class FirstPersonController : MonoBehaviour {
 				float yPos = cameraTransform.localPosition.y;
 				if(yPos >= maximum){
 					upwards = false;
-					time = 0;
 				}
 			}else{
 				cameraTransform.localPosition -= new Vector3 (0, Time.deltaTime/duration, 0);
 				float yPos = cameraTransform.localPosition.y;
 				if(yPos <= minimum){
 					upwards = true;
-					time = 0;
 				}
 			}
 		}
@@ -143,7 +140,6 @@ public class FirstPersonController : MonoBehaviour {
 	{
         //Debug.DrawRay(transform.position, -transform.up, Color.red, 0.1f);
 		bool ground = Physics.Raycast (transform.position, - transform.up, 1 + 0.3f, groundedMask);
-        print("ground " + ground + "; stairground " + IsStairGrounded());
         grounded = (ground || IsStairGrounded());
         return grounded; //letzter Parameter groundedMask
 	}

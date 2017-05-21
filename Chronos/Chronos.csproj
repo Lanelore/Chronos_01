@@ -101,6 +101,7 @@
     <Compile Include="Assets\Player Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Player Scripts\GeneralAudioFiles.cs" />
     <Compile Include="Assets\Player Scripts\GravityBody.cs" />
+    <Compile Include="Assets\PushObjects.cs" />
     <Compile Include="Assets\Respawn.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
