@@ -9,27 +9,35 @@ public class ManipulateTime : MonoBehaviour {
     private Vector3 savedAngularVelocity;
     private Rigidbody rb;
     private Animator an;
-    public bool toPause = false;
+    private PushObjects po;
+    public bool toFreeze = false;
+    public bool toFastForward = false;
     public bool toResume = false;
 
     // Use this for initialization
     void Start () {
         rb = gameObject.GetComponent<Rigidbody>();
         an = gameObject.GetComponent<Animator>();
+        po = gameObject.GetComponent<PushObjects>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButtonDown("Freeze") && time != 1)
+        if (Input.GetButtonDown("Freeze") && time != 0)
+        {
+            time = 0;
+            toFreeze = true;
+        }
+        else if (Input.GetButtonDown("Fast Forward") && time != 2)
+        {
+            time = 2;
+            toFastForward = true;
+        }
+        else if ((Input.GetButtonDown("Freeze") || Input.GetButtonDown("Fast Forward")) && time != 1)
         {
             time = 1;
             toResume = true;
-        }
-        else if (Input.GetButtonDown("Freeze") && time != 0)
-        {
-            time = 0;
-            toPause = true;
         }
     }
 
@@ -37,11 +45,15 @@ public class ManipulateTime : MonoBehaviour {
     {
         ThrowObject throwObject = gameObject.GetComponent<ThrowObject>();
         if (throwObject && throwObject.beingCarried)
-            return;        
+            return;    
 
-        if (toPause && time == 0)
+        if (toFreeze && time == 0)
         {
-            PauseGame();
+            FreezeGame();
+        }
+        else if (toFastForward && time != 0)
+        {
+            FastForwardGame();
         }
         else if (toResume && time != 0)
         {
@@ -49,21 +61,49 @@ public class ManipulateTime : MonoBehaviour {
         }
     }
 
-    public void PauseGame()
+    public void FreezeGame()
     {
-        toPause = false;
+        toFreeze = false;
 
         if (an != null)
         {
-            an.enabled = false;
+            an.speed = 0;
         }
-        else
+        else if (rb != null)
         {
             savedVelocity = rb.velocity;
             savedAngularVelocity = rb.angularVelocity;
             rb.isKinematic = true;
         }
+
+        if (po != null)
+        {
+            po.resetThrust();
+        }
     }
+
+    public void FastForwardGame()
+    {
+        toFastForward = false;
+
+        if (an != null)
+        {
+            an.speed = 2;
+        }
+        // resume rigidbodies if they are still frozen
+        else if (rb != null && rb.isKinematic)
+        {
+            rb.isKinematic = false;
+            rb.AddForce(savedVelocity, ForceMode.VelocityChange);
+            rb.AddTorque(savedAngularVelocity, ForceMode.VelocityChange);
+        }
+
+        if (po != null)
+        {
+            po.increaseThrust();
+        }
+    }
+
 
     public void ResumeGame()
     {
@@ -71,13 +111,18 @@ public class ManipulateTime : MonoBehaviour {
 
         if (an != null)
         {
-            an.enabled = true;
+            an.speed = 1;
         }
-        else
+        else if (rb != null && rb.isKinematic)
         {
             rb.isKinematic = false;
             rb.AddForce(savedVelocity, ForceMode.VelocityChange);
             rb.AddTorque(savedAngularVelocity, ForceMode.VelocityChange);
+        }
+
+        if (po != null)
+        {
+            po.resetThrust();
         }
     }
 
@@ -92,7 +137,7 @@ public class ManipulateTime : MonoBehaviour {
         }
         else if (time == 0)
         {
-            PauseGame();
+            FreezeGame();
         }
     }
 }

@@ -6,66 +6,39 @@ using UnityEngine.UI;
 public class TimeDisplay : MonoBehaviour {
 
     public float time = 1;
-    public bool toPause = false;
-    public bool toResume = false;
+    ManipulateTime mt;
 
     // Use this for initialization
     void Start () {
-
+        mt = gameObject.GetComponent<ManipulateTime>();
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetButtonDown("Freeze") && time != 1)
+        if (time != mt.time)
         {
-            time = 1;
-            toResume = true;
-        }
-        else if (Input.GetButtonDown("Freeze") && time != 0)
-        {
-            time = 0;
-            toPause = true;
+            time = mt.time;
+            UpdateText();
         }
     }
 
-    void FixedUpdate()
+    void UpdateText()
     {
-        if (toPause && time == 0)
-        {
-            PauseGame();
-        }
-        else if (toResume && time != 0)
-        {
-            ResumeGame();
-        }
-    }
-
-    public void PauseGame()
-    {
-        toPause = false;
         Text timeText = gameObject.GetComponent<Text>();
-        timeText.color = Color.red;
-        timeText.text = "Time x0";
-    }
+        timeText.text = "Time x" + time;
 
-    public void ResumeGame()
-    {
-        toResume = false;
-        Text timeText = gameObject.GetComponent<Text>();
-        timeText.color = Color.green;
-        timeText.text = "Time x1";
-    }
-
-    public void updateTime()
-    {
-        if (time == 1)
+        if (time == 0)
         {
-            ResumeGame();
+            timeText.color = Color.red;
         }
-        else if (time == 0)
+        else if (time == 1)
         {
-            PauseGame();
+            timeText.color = Color.green;
+        }
+        else if (time == 2)
+        {
+            timeText.color = Color.blue;
         }
     }
 }

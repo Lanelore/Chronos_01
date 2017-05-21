@@ -6,11 +6,13 @@ public class PushObjects : MonoBehaviour {
 
     //The list of colliders currently inside the trigger
     List<Collider> triggerList;
-    public float thrust = 10;
+    public float standardThrust = 10;
+    private float thrust = 0;
 
     // Use this for initialization
     void Start () {
         triggerList = new List<Collider> ();
+        thrust = standardThrust;
     }
 	
 	// Update is called once per frame
@@ -18,7 +20,7 @@ public class PushObjects : MonoBehaviour {
 		
 	}
 
-    public void PushColliders()
+    void PushColliders()
     {
         //activate enemies
         foreach (Collider collider in triggerList)
@@ -26,11 +28,19 @@ public class PushObjects : MonoBehaviour {
             Rigidbody rigidBody = collider.gameObject.GetComponent<Rigidbody>();
             if (rigidBody)
             {
-                rigidBody.AddForce(transform.up * thrust);
-                print("added force to " + collider.gameObject.name);
+                rigidBody.AddForce(transform.up * thrust * 100);
             }
         }
-        Debug.Log("PrintEvent: called at: " + Time.time);
+    }
+
+    public void increaseThrust()
+    {
+        thrust = standardThrust * 2;
+    }
+
+    public void resetThrust()
+    {
+        thrust = standardThrust;
     }
  
     //called when something enters the trigger
