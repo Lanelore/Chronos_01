@@ -75,18 +75,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ManipulateTime.cs" />
-    <Compile Include="Assets\Player Scripts\FirstPersonController.cs" />
-    <Compile Include="Assets\Player Scripts\GeneralAudioFiles.cs" />
-    <Compile Include="Assets\Player Scripts\GravityBody.cs" />
-    <Compile Include="Assets\PushObjects.cs" />
-    <Compile Include="Assets\Respawn.cs" />
+    <Compile Include="Assets\Custom Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Custom Scripts\ManipulateTime.cs" />
+    <Compile Include="Assets\Custom Scripts\PushObjects.cs" />
+    <Compile Include="Assets\Custom Scripts\Respawn.cs" />
+    <Compile Include="Assets\Custom Scripts\SpawnPosition.cs" />
+    <Compile Include="Assets\Custom Scripts\ThrowObject.cs" />
+    <Compile Include="Assets\Custom Scripts\TimeDisplay.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
-    <Compile Include="Assets\SpawnPosition.cs" />
-    <Compile Include="Assets\ThrowObject.cs" />
-    <Compile Include="Assets\TimeDisplay.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Block HL.shader" />
