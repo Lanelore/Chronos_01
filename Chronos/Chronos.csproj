@@ -82,6 +82,7 @@
     <Compile Include="Assets\Custom Scripts\SpawnPosition.cs" />
     <Compile Include="Assets\Custom Scripts\ThrowObject.cs" />
     <Compile Include="Assets\Custom Scripts\TimeDisplay.cs" />
+    <Compile Include="Assets\Custom Scripts\TimeMaterial.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
