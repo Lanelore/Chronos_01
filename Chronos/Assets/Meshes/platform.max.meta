@@ -1,20 +1,18 @@
 fileFormatVersion: 2
-guid: 6e2bcedb964df7544909204862dbb7f7
-timeCreated: 1496162501
+guid: f1debf58e6f01d540ac4f72e1c57ef58
+timeCreated: 1496164603
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: connector
     100002: //RootNode
-    100004: platform
     400000: connector
     400002: //RootNode
-    400004: platform
     2300000: connector
-    2300002: platform
+    2300002: //RootNode
     3300000: connector
-    3300002: platform
+    3300002: //RootNode
     4300000: platform
     4300002: connector
     9500000: //RootNode
