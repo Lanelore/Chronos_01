@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Custom Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Custom Scripts\LoadNextLevel.cs" />
     <Compile Include="Assets\Custom Scripts\ManipulateTime.cs" />
     <Compile Include="Assets\Custom Scripts\PushObjects.cs" />
     <Compile Include="Assets\Custom Scripts\Respawn.cs" />
