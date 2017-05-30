@@ -62,6 +62,7 @@ public class ThrowObject : MonoBehaviour
 
         if (hasPlayer && Input.GetButtonDown("Action") && beingCarried == false)
         {
+            GetComponent<BoxCollider>().enabled = false;
             GetComponent<Rigidbody>().isKinematic = true;
             /*
             float objectSize = gameObject.GetComponent<Renderer>().bounds.size.magnitude;
@@ -82,6 +83,7 @@ public class ThrowObject : MonoBehaviour
         {
             if (touched)
             {
+                GetComponent<BoxCollider>().enabled = true;
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
@@ -96,6 +98,7 @@ public class ThrowObject : MonoBehaviour
             if (canThrow && beingCarried && Input.GetButtonDown("Action"))
             {
                 canThrow = false;
+                GetComponent<BoxCollider>().enabled = true;
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
@@ -105,6 +108,7 @@ public class ThrowObject : MonoBehaviour
             else if (canThrow && beingCarried && Input.GetButtonDown("Throw"))
             {
                 canThrow = false;
+                GetComponent<BoxCollider>().enabled = true;
                 GetComponent<Rigidbody>().isKinematic = false;
                 transform.parent = null;
                 beingCarried = false;
@@ -141,7 +145,7 @@ public class ThrowObject : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (beingCarried && !other.CompareTag("Player"))
+        if (beingCarried)
         {
             touched = true;
         }
