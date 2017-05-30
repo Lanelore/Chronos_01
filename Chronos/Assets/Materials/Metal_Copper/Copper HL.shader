@@ -1,17 +1,17 @@
 // Shader created with Shader Forge v1.36 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.36;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6343-OUT,spec-358-OUT,gloss-1813-OUT,normal-5964-RGB,olwid-3973-OUT,olcol-3651-RGB;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.8,c2:0.5,c3:0.1,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32407,y:32978,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.3504274,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_ValueProperty,id:3973,x:32552,y:33156,ptovrint:False,ptlb:node_3973,ptin:_node_3973,varname:node_3973,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0.05;n:type:ShaderForge.SFN_Color,id:3651,x:32135,y:33049,ptovrint:False,ptlb:node_3651,ptin:_node_3651,varname:node_3651,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0,c2:1,c3:1,c4:1;proporder:5964-6665-7736-358-1813-3973-3651;pass:END;sub:END;*/
+/*SF_DATA;ver:1.36;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6343-OUT,spec-358-OUT,gloss-1813-OUT,normal-5964-RGB,amspl-2373-RGB,olwid-5245-OUT,olcol-8551-RGB;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.8019608,c2:0.5019608,c3:0.1019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32620,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32407,y:32978,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Slider,id:358,x:32250,y:32780,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.3,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32250,y:32882,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.8,max:1;n:type:ShaderForge.SFN_Vector1,id:5245,x:32443,y:33256,varname:node_5245,prsc:2,v1:0.015;n:type:ShaderForge.SFN_Color,id:8551,x:32173,y:33188,ptovrint:False,ptlb:node_8551,ptin:_node_8551,varname:node_8551,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0,c2:1,c3:1,c4:1;n:type:ShaderForge.SFN_Tex2d,id:2373,x:31931,y:33110,ptovrint:False,ptlb:node_2373,ptin:_node_2373,varname:node_2373,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:dc00ebb16d33e2d4e99765b49975206a,ntxv:0,isnm:False;proporder:5964-6665-7736-358-1813-8551-2373;pass:END;sub:END;*/
 
-Shader "Shader Forge/Copper HL" {
+Shader "Shader Forge/Copper HL 2" {
     Properties {
         _BumpMap ("Normal Map", 2D) = "bump" {}
-        _Color ("Color", Color) = (0.8,0.5,0.1,1)
+        _Color ("Color", Color) = (0.8019608,0.5019608,0.1019608,1)
         _MainTex ("Base Color", 2D) = "white" {}
-        _Metallic ("Metallic", Range(0, 1)) = 0.3504274
+        _Metallic ("Metallic", Range(0, 1)) = 0.3
         _Gloss ("Gloss", Range(0, 1)) = 0.8
-        _node_3973 ("node_3973", Float ) = 0.05
-        _node_3651 ("node_3651", Color) = (0,1,1,1)
+        _node_8551 ("node_8551", Color) = (0,1,1,1)
+        _node_2373 ("node_2373", 2D) = "white" {}
     }
     SubShader {
         Tags {
@@ -40,8 +40,7 @@ Shader "Shader Forge/Copper HL" {
             #pragma multi_compile_fog
             #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 3.0
-            uniform float _node_3973;
-            uniform float4 _node_3651;
+            uniform float4 _node_8551;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -60,13 +59,13 @@ Shader "Shader Forge/Copper HL" {
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = mul(UNITY_MATRIX_MVP, float4(v.vertex.xyz + v.normal*_node_3973,1) );
+                o.pos = mul(UNITY_MATRIX_MVP, float4(v.vertex.xyz + v.normal*0.015,1) );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                return fixed4(_node_3651.rgb,0);
+                return fixed4(_node_8551.rgb,0);
             }
             ENDCG
         }
@@ -100,6 +99,7 @@ Shader "Shader Forge/Copper HL" {
             uniform sampler2D _BumpMap; uniform float4 _BumpMap_ST;
             uniform float _Metallic;
             uniform float _Gloss;
+            uniform sampler2D _node_2373; uniform float4 _node_2373_ST;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -209,6 +209,7 @@ Shader "Shader Forge/Copper HL" {
                 lightColor = gi.light.color;
 ////// Specular:
                 float NdotL = saturate(dot( normalDirection, lightDirection ));
+                float4 _node_2373_var = tex2D(_node_2373,TRANSFORM_TEX(i.uv0, _node_2373));
                 float LdotH = saturate(dot(lightDirection, halfDirection));
                 float3 specularColor = _Metallic;
                 float specularMonochrome;
@@ -238,7 +239,7 @@ Shader "Shader Forge/Copper HL" {
                 specularPBL *= any(specularColor) ? 1.0 : 0.0;
                 float3 directSpecular = attenColor*specularPBL*FresnelTerm(specularColor, LdotH);
                 half grazingTerm = saturate( gloss + specularMonochrome );
-                float3 indirectSpecular = (gi.indirect.specular);
+                float3 indirectSpecular = (gi.indirect.specular + _node_2373_var.rgb);
                 indirectSpecular *= FresnelLerp (specularColor, grazingTerm, NdotV);
                 indirectSpecular *= surfaceReduction;
                 float3 specular = (directSpecular + indirectSpecular);
