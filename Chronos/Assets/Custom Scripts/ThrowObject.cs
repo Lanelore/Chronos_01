@@ -3,9 +3,9 @@ using System.Collections;
 
 public class ThrowObject : MonoBehaviour
 {
-    public Transform player;
-    public Transform playerCam;
-    public float throwForce = 10;
+    Transform player;
+    Transform playerCam;
+    public static float throwForce = 10;
     private bool hasPlayer = false; // the item is within the player's reach
     public bool beingCarried = false; // currently in the process of being picked up or carried around
     private bool canThrow = false; // the player is no longer pressing the Action button, the pickup process has stopped or is finished
@@ -14,16 +14,42 @@ public class ThrowObject : MonoBehaviour
     private Material materialNormal;
     public Material materialHL;
     ManipulateTime manipulateTime;
+    Renderer mainRenderer;
+    Renderer subRenderer;
 
     private void Start()
     {
-        materialNormal = gameObject.GetComponent<Renderer>().material;
+        // fetch material from parent or first child
+        materialNormal = FetchMaterial();
         manipulateTime = gameObject.GetComponent<ManipulateTime>();
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        player = players[0].transform;
+        playerCam = player.GetChild(0);
+    }
+
+    Material FetchMaterial()
+    {
+        // fetch material from parent or first child
+        mainRenderer = gameObject.GetComponent<Renderer>();
+        subRenderer = gameObject.GetComponentInChildren<Renderer>();
+
+        if (mainRenderer)
+        {
+            return mainRenderer.material;
+        }
+        else if (subRenderer)
+        {
+            return subRenderer.material;
+        }
+        else
+        {
+            return null;
+        }
     }
 
     void Update()
     {
-        Material currentMaterial = gameObject.GetComponent<Renderer>().material;
+        Material currentMaterial = FetchMaterial();
         float dist = Vector3.Distance(gameObject.transform.position, player.position);
         if (dist <= 2.5f && gameObject.GetComponent<Renderer>().isVisible)
         {
@@ -33,7 +59,7 @@ public class ThrowObject : MonoBehaviour
         {
             hasPlayer = false;
         }
-        
+
         if (hasPlayer && Input.GetButtonDown("Action") && beingCarried == false)
         {
             GetComponent<Rigidbody>().isKinematic = true;
@@ -91,11 +117,25 @@ public class ThrowObject : MonoBehaviour
 
         if (highlight && currentMaterial != materialHL)
         {
-            gameObject.GetComponent<Renderer>().material = materialHL;
+            if (mainRenderer)
+            {
+                gameObject.GetComponent<Renderer>().material = materialHL;
+            }
+            else if (subRenderer)
+            {
+                gameObject.GetComponentInChildren<Renderer>().material = materialHL;
+            }
         }
         else if (!highlight && currentMaterial != materialNormal)
         {
-            gameObject.GetComponent<Renderer>().material = materialNormal;
+            if (mainRenderer)
+            {
+                gameObject.GetComponent<Renderer>().material = materialNormal;
+            }
+            else if (subRenderer)
+            {
+                gameObject.GetComponentInChildren<Renderer>().material = materialNormal;
+            }
         }
     }
 

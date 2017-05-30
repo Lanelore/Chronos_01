@@ -87,9 +87,9 @@
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Block HL.shader" />
-    <None Include="Assets\Block.shader" />
-    <None Include="Assets\Copper.shader" />
+    <None Include="Assets\Materials\Block HL.shader" />
+    <None Include="Assets\Materials\Block.shader" />
+    <None Include="Assets\Materials\Copper.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\ExtractChannel.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\FillColor.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\ReadPackedData.shader" />
@@ -284,6 +284,7 @@
     <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
     <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
     <None Include="Assets\ShaderForge\Readme.txt" />
+    <None Include="Assets\Skybox\ReadMe.txt" />
     <None Include="Assets\_Barking_Dog\Readme_Please.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
