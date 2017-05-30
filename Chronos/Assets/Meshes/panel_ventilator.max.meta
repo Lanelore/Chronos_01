@@ -10,23 +10,41 @@ ModelImporter:
     100004: //RootNode
     100006: Rotor
     100008: Ventilator-Plane
+    100010: ventilator
+    100012: ventilator_axis
+    100014: ventilator_grid
     400000: Achse
     400002: Gitter
     400004: //RootNode
     400006: Rotor
     400008: Ventilator-Plane
+    400010: ventilator
+    400012: ventilator_axis
+    400014: ventilator_grid
     2300000: Achse
     2300002: Gitter
     2300004: Rotor
     2300006: Ventilator-Plane
+    2300008: //RootNode
+    2300010: ventilator
+    2300012: ventilator_axis
+    2300014: ventilator_grid
     3300000: Achse
     3300002: Gitter
     3300004: Rotor
     3300006: Ventilator-Plane
+    3300008: //RootNode
+    3300010: ventilator
+    3300012: ventilator_axis
+    3300014: ventilator_grid
     4300000: Ventilator-Plane
     4300002: Achse
     4300004: Rotor
     4300006: Gitter
+    4300008: plane_ventilator
+    4300010: ventilator
+    4300012: ventilator_grid
+    4300014: ventilator_axis
     7400000: Take 001
     9500000: //RootNode
   materials:

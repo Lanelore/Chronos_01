@@ -5,7 +5,7 @@ public class ThrowObject : MonoBehaviour
 {
     Transform player;
     Transform playerCam;
-    public static float throwForce = 10;
+    public static float throwForce = 20;
     private bool hasPlayer = false; // the item is within the player's reach
     public bool beingCarried = false; // currently in the process of being picked up or carried around
     private bool canThrow = false; // the player is no longer pressing the Action button, the pickup process has stopped or is finished

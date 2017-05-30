@@ -9,19 +9,32 @@ ModelImporter:
     100002: Center
     100004: Edge
     100006: //RootNode
+    100008: cube_inner
+    100010: screws
     400000: Box001
     400002: Center
     400004: Edge
     400006: //RootNode
+    400008: cube_inner
+    400010: screws
     2300000: Box001
     2300002: Center
     2300004: Edge
+    2300006: cube_inner
+    2300008: //RootNode
+    2300010: screws
     3300000: Box001
     3300002: Center
     3300004: Edge
+    3300006: cube_inner
+    3300008: //RootNode
+    3300010: screws
     4300000: Center
     4300002: Edge
     4300004: Box001
+    4300006: cube_edges
+    4300008: cube_inner
+    4300010: screws
     9500000: //RootNode
   materials:
     importMaterials: 1
