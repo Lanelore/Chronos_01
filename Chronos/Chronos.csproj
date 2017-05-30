@@ -89,6 +89,7 @@
   <ItemGroup>
     <None Include="Assets\Block HL.shader" />
     <None Include="Assets\Block.shader" />
+    <None Include="Assets\Copper.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\ExtractChannel.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\FillColor.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\ReadPackedData.shader" />
