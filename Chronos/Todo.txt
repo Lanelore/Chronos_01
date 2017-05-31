@@ -1,0 +1,15 @@
+Bianca:
+Szene1 ausleuchten
+Kupfer-Material aufhellen
+Eigenes Material für Boden
+--
+Script: Spiel beenden
+Script: Animation der Brücken zurücksetzen
+Interface mit Zeit-Anzeige
+
+Lukas:
+Licht samt Emission-Leuchtkörper modellieren
+--
+Stiege UV-Mappen
+Piston, Lange Stiege, Goal, Start (zB Bogen mit Tür)
+Level02 (Cube transport) Entwurf
