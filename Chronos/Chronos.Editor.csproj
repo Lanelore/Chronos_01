@@ -115,14 +115,14 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="ShaderForge">
-      <HintPath>Assets\ShaderForge\Editor\ShaderForge.dll</HintPath>
-    </Reference>
     <Reference Include="AmplifyColor">
       <HintPath>Assets\AmplifyColor\Plugins\AmplifyColor.dll</HintPath>
     </Reference>
     <Reference Include="AmplifyColorEditor">
       <HintPath>Assets\AmplifyColor\Plugins\Editor\AmplifyColorEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="ShaderForge">
+      <HintPath>Assets\ShaderForge\Editor\ShaderForge.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
