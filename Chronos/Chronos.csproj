@@ -76,8 +76,22 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="AmplifyColor">
+      <HintPath>Assets\AmplifyColor\Plugins\AmplifyColor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorBase.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorEffect.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorTriggerProxy.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorTriggerProxy2D.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorTriggerProxyBase.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorVolume.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorVolume2D.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\AmplifyColorVolumeBase.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Runtime\VersionInfo.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Runtime\VolumeEffects.cs" />
+    <Compile Include="Assets\AmplifyColor\Plugins\Runtime\VolumeEffectsFlags.cs" />
     <Compile Include="Assets\Custom Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Custom Scripts\LoadNextLevel.cs" />
     <Compile Include="Assets\Custom Scripts\ManipulateTime.cs" />
@@ -87,16 +101,48 @@
     <Compile Include="Assets\Custom Scripts\ThrowObject.cs" />
     <Compile Include="Assets\Custom Scripts\TimeDisplay.cs" />
     <Compile Include="Assets\Custom Scripts\TimeMaterial.cs" />
+    <Compile Include="Assets\Paroxe\UltimateBloom\Scripts\BokehRenderer.cs" />
+    <Compile Include="Assets\Paroxe\UltimateBloom\Scripts\DeluxeFilmicCurve.cs" />
+    <Compile Include="Assets\Paroxe\UltimateBloom\Scripts\UBHelper.cs" />
+    <Compile Include="Assets\Paroxe\UltimateBloom\Scripts\UltimateBloom.cs" />
+    <Compile Include="Assets\Paroxe\UltimateBloom\UltimateBloomPathLocator.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\AmplifyColor\Readme.txt" />
+    <None Include="Assets\AmplifyColor\Resources\Base.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Blend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\BlendCache.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Common.cginc" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\DepthMaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\Mask.shader" />
+    <None Include="Assets\AmplifyColor\Resources\MaskBlend.shader" />
+    <None Include="Assets\AmplifyColor\Resources\ProcessOnly.shader" />
+    <None Include="Assets\AmplifyColor\Samples\Check out the full LUT Package.txt" />
     <None Include="Assets\Materials\Block HL.shader" />
     <None Include="Assets\Materials\Block.shader" />
     <None Include="Assets\Materials\Cube\VertexAnimation.shader" />
     <None Include="Assets\Materials\Metal_Copper\Copper HL.shader" />
     <None Include="Assets\Materials\Metal_Copper\Copper.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\LegacyVersions\Readme.txt" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBloomBokehMisc.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBloomCombine.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBloomCombineCore.cginc" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBloomCombineFlareDirt.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBloomMixer.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBloomShader.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBokehTexture.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBrightpassCore.cginc" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateBrightpassMask.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateFlareCore.cginc" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateFlareDouble.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateFlareMask.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateFlareMeshShader.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateFlareSingle.shader" />
+    <None Include="Assets\Paroxe\UltimateBloom\Resources\UltimateSampling.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\ExtractChannel.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\FillColor.shader" />
     <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\Common\ReadPackedData.shader" />
