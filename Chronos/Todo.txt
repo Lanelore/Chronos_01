@@ -1,10 +1,10 @@
 Bianca:
 Szene1 ausleuchten
-Kupfer-Material aufhellen
-Eigenes Material für Boden
+o Kupfer-Material aufhellen
+o Eigenes Material für Boden
 --
 Script: Spiel beenden
-Script: Animation der Brücken zurücksetzen
+o Script: Animation der Brücken zurücksetzen
 Interface mit Zeit-Anzeige
 
 Lukas:
