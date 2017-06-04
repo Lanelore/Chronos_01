@@ -1,11 +1,15 @@
 Bianca:
 Szene1 ausleuchten
-o Kupfer-Material aufhellen
+Szene1 neu anordnen - Dekoelemente, Wall-Panels in Gruben, Gangbreite
+o Zweites Kupfer Material (Propeller, Rohre)
 o Eigenes Material für Boden
 --
 Script: Spiel beenden
 o Script: Animation der Brücken zurücksetzen
+o Weiße Ränder zwischen Panels entfernen
 Interface mit Zeit-Anzeige
+Info-Fenster zum Aufklappen
+
 
 Lukas:
 Licht samt Emission-Leuchtkörper modellieren
