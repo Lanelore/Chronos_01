@@ -173,6 +173,9 @@
     <None Include="Assets\Materials\Block HL.shader" />
     <None Include="Assets\Materials\Block.shader" />
     <None Include="Assets\Materials\Cube\VertexAnimation.shader" />
+    <None Include="Assets\Materials\Cube\VertexBlue.shader" />
+    <None Include="Assets\Materials\Cube\VertexGreen.shader" />
+    <None Include="Assets\Materials\Cube\VertexRed.shader" />
     <None Include="Assets\Materials\Metal_Copper\Copper HL.shader" />
     <None Include="Assets\Materials\Metal_Copper\Copper.shader" />
     <None Include="Assets\Paroxe\UltimateBloom\LegacyVersions\Readme.txt" />
