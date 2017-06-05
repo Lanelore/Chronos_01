@@ -1,19 +1,19 @@
 Bianca:
-Szene1 ausleuchten
-Szene1 neu anordnen - Dekoelemente, Wall-Panels in Gruben, Gangbreite
+o Szene1 ausleuchten
+o Szene1 neu anordnen - Dekoelemente, Wall-Panels in Gruben, Gangbreite
 o Zweites Kupfer Material (Propeller, Rohre)
 o Eigenes Material für Boden
 --
-Script: Spiel beenden
+o Script: Spiel beenden
 o Script: Animation der Brücken zurücksetzen
 o Weiße Ränder zwischen Panels entfernen
+o Licht samt Emission-Leuchtkörper modellieren
+o Zeit-Material mitstoppen/beschleunigen
 Interface mit Zeit-Anzeige
-Info-Fenster zum Aufklappen
-
+Info-Fenster zum Aufklappen (mit Controls)
+BG Sounds?
 
 Lukas:
-Licht samt Emission-Leuchtkörper modellieren
---
 Stiege UV-Mappen
-Piston, Lange Stiege, Goal, Start (zB Bogen mit Tür)
+Piston, Lange Stiege, Goal, Start (zB Bogen mit Tür/Portal)
 Level02 (Cube transport) Entwurf
