@@ -12,8 +12,12 @@ public class LoadNextLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetButtonDown("Escape"))
+        {
+            Application.Quit();
+        }
+
+    }
 
     void OnTriggerEnter(Collider other)
     {
