@@ -1,19 +1,16 @@
 Bianca:
-o Szene1 ausleuchten
-o Szene1 neu anordnen - Dekoelemente, Wall-Panels in Gruben, Gangbreite
-o Zweites Kupfer Material (Propeller, Rohre)
-o Eigenes Material für Boden
---
-o Script: Spiel beenden
-o Script: Animation der Brücken zurücksetzen
-o Weiße Ränder zwischen Panels entfernen
-o Licht samt Emission-Leuchtkörper modellieren
-o Zeit-Material mitstoppen/beschleunigen
+Riesendekoelemente Level1
 Interface mit Zeit-Anzeige
 Info-Fenster zum Aufklappen (mit Controls)
-BG Sounds?
+Stiege UV-Mappen
+Level 02 dekorieren, testen, ausleuchten
 
 Lukas:
-Stiege UV-Mappen
-Piston, Lange Stiege, Goal, Start (zB Bogen mit Tür/Portal)
-Level02 (Cube transport) Entwurf
+1. Level02 (Cube transport) Entwurf
+1.5. Lange Stiegen
+2. Piston, 
+3. Goal, Start (zB Bogen mit Tür/Portal)
+4. Level03 (Pistons und Würfel)
+
+Nice to have:
+BG Sounds? (Rotorgeräusche Ventilator)
