@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronos", "Chronos.csproj", "{2DA18012-EA6B-FAED-3EAF-4C175FE60D70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chronos.Editor", "Chronos.Editor.csproj", "{5AD6392F-D9BC-396E-8094-F8B961308E36}"
