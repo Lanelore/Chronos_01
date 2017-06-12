@@ -1,5 +1,4 @@
 Bianca:
-Riesendekoelemente Level1
 Interface mit Zeit-Anzeige
 Info-Fenster zum Aufklappen (mit Controls)
 Stiege UV-Mappen

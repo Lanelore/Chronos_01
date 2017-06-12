@@ -21,10 +21,13 @@ public class LoadNextLevel : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        print("Trigger Door");
         if (other.gameObject.tag == "Player")
         {
+            print("Trigger Player");
             int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-            if (nextScene < SceneManager.sceneCount)
+            print("next " + nextScene + "; count " + SceneManager.sceneCount);
+            if (nextScene <= SceneManager.sceneCount)
             {
                 SceneManager.LoadScene(nextScene);
             }
