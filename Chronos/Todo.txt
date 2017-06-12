@@ -2,13 +2,10 @@ Bianca:
 Interface mit Zeit-Anzeige
 Info-Fenster zum Aufklappen (mit Controls)
 Stiege UV-Mappen
-Level 02 dekorieren, testen, ausleuchten
+Start-Image und Icons
 
 Lukas:
-1. Level02 (Cube transport) Entwurf
-1.5. Lange Stiegen
-2. Piston, 
-3. Goal, Start (zB Bogen mit Tür/Portal)
+2. Piston
 4. Level03 (Pistons und Würfel)
 
 Nice to have:
