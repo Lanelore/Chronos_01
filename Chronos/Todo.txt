@@ -1,12 +1,9 @@
 Bianca:
 Interface mit Zeit-Anzeige
-Info-Fenster zum Aufklappen (mit Controls)
-Stiege UV-Mappen
+Info-Fenster zum Aufklappen (mit Controls) + Maus Sensitivity
 Start-Image und Icons
 
 Lukas:
 2. Piston
 4. Level03 (Pistons und Würfel)
-
-Nice to have:
-BG Sounds? (Rotorgeräusche Ventilator)
+Stiege UV-Mappen
