@@ -4,7 +4,7 @@ Info-Fenster zum Aufklappen (mit Controls) + Maus Sensitivity
 Start-Image und Icons
 
 Lukas:
-2. Piston
-4. Level03 (Pistons und Würfel)
+Piston Mesh überarbeiten (UV?)
+Level03 (Pistons und Würfel)
 
 Hauptmenü
