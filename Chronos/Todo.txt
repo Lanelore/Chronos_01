@@ -1,8 +1,9 @@
 Bianca:
 o Info-Fenster zum Aufklappen (mit Controls)
-Start-Image und Icons
+o Start-Image und Icons
 o Licht-Falloff
 o Collider unterhalb Stufen
+Ending Screen
 Pistonmesh einbauen
 Piston: lock movement while on piston
 NOT DONE: Infofenster zum Ausklappen (Mauszeiger ist ja gelockt)
@@ -11,6 +12,6 @@ NOT DONE: Breitere Stiegen in Lv2: long stair nur einseitig
 Lukas:
 Piston Mesh überarbeiten (UV?)
 Level03 (Pistons und Würfel)
-L-shaped Dreieckswandteile + Doppelwandteile UV-Mappen
+L-shaped Dreieckswandteile + Doppelwandteile UV-Mappen (verwendet in Lv1, ansonsten andere Prefabs nehmen)
 
 Hauptmenü
