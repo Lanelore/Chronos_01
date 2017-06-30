@@ -3,7 +3,8 @@ o Info-Fenster zum Aufklappen (mit Controls)
 o Start-Image und Icons
 o Licht-Falloff
 o Collider unterhalb Stufen
-Ending Screen
+o Ending Screen
+o Disable all sounds (wenn dann alles)
 Pistonmesh einbauen
 Piston: lock movement while on piston
 NOT DONE: Infofenster zum Ausklappen (Mauszeiger ist ja gelockt)
