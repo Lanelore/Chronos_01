@@ -1,8 +1,12 @@
 Bianca:
-Info-Fenster zum Aufklappen (mit Controls)
+o Info-Fenster zum Aufklappen (mit Controls)
 Start-Image und Icons
 o Licht-Falloff
-Collider unterhalb Stufen
+o Collider unterhalb Stufen
+Pistonmesh einbauen
+Piston: lock movement while on piston
+NOT DONE: Infofenster zum Ausklappen (Mauszeiger ist ja gelockt)
+NOT DONE: Breitere Stiegen in Lv2: long stair nur einseitig
 
 Lukas:
 Piston Mesh überarbeiten (UV?)
