@@ -3,7 +3,7 @@ o Info-Fenster zum Aufklappen (mit Controls)
 o Start-Image und Icons
 o Licht-Falloff
 o Collider unterhalb Stufen
-o Ending Screen
+o Splash and Ending Screen (Splash only im Build)
 o Disable all sounds (wenn dann alles)
 o Piston: lock movement while on piston (works with new controls)
 Not DONE: Pistonmesh einbauen (mesh fehlt! base prefab ist direkt im ordner)
