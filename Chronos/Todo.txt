@@ -5,8 +5,8 @@ o Licht-Falloff
 o Collider unterhalb Stufen
 o Ending Screen
 o Disable all sounds (wenn dann alles)
-Pistonmesh einbauen
-Piston: lock movement while on piston
+o Piston: lock movement while on piston (works with new controls)
+Not DONE: Pistonmesh einbauen (mesh fehlt! base prefab ist direkt im ordner)
 NOT DONE: Infofenster zum Ausklappen (Mauszeiger ist ja gelockt)
 NOT DONE: Breitere Stiegen in Lv2: long stair nur einseitig
 
