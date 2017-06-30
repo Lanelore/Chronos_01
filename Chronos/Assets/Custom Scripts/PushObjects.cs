@@ -28,7 +28,7 @@ public class PushObjects : MonoBehaviour {
             Rigidbody rigidBody = collider.gameObject.GetComponent<Rigidbody>();
             if (rigidBody)
             {
-                rigidBody.AddForce(transform.up * thrust * 100);
+                rigidBody.AddForce(transform.up * thrust * 10);
             }
         }
     }
