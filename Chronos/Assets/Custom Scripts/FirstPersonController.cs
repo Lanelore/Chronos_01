@@ -180,4 +180,11 @@ public class FirstPersonController : MonoBehaviour {
 			//manager.CompleteLevel();
 		}
 	}
+
+    public void ChangeMouseSensitivity(float sensitivity)
+    {
+        mouseSensitivityX = sensitivity;
+        mouseSensitivityY = sensitivity;
+        string sensitivityString = sensitivity.ToString();
+    }
 }

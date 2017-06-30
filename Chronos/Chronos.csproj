@@ -106,6 +106,7 @@
     <Compile Include="Assets\Custom Scripts\SpawnPosition.cs" />
     <Compile Include="Assets\Custom Scripts\ThrowObject.cs" />
     <Compile Include="Assets\Custom Scripts\TimeDisplay.cs" />
+    <Compile Include="Assets\Custom Scripts\TimeImage.cs" />
     <Compile Include="Assets\Custom Scripts\TimeMaterial.cs" />
     <Compile Include="Assets\Paroxe\UltimateBloom\Scripts\BokehRenderer.cs" />
     <Compile Include="Assets\Paroxe\UltimateBloom\Scripts\DeluxeFilmicCurve.cs" />
