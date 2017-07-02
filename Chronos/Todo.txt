@@ -8,11 +8,9 @@ o Disable all sounds (wenn dann alles)
 o Piston: lock movement while on piston (works with new controls)
 Not DONE: Pistonmesh einbauen (mesh fehlt! base prefab ist direkt im ordner)
 NOT DONE: Infofenster zum Ausklappen (Mauszeiger ist ja gelockt)
-NOT DONE: Breitere Stiegen in Lv2: long stair nur einseitig
 
 Lukas:
 Piston Mesh überarbeiten (UV?)
 Level03 (Pistons und Würfel)
-L-shaped Dreieckswandteile + Doppelwandteile UV-Mappen (verwendet in Lv1, ansonsten andere Prefabs nehmen)
 
 Hauptmenü
