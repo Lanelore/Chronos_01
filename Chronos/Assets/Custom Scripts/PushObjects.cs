@@ -6,7 +6,7 @@ public class PushObjects : MonoBehaviour {
 
     //The list of colliders currently inside the trigger
     List<Collider> triggerList;
-    public float standardThrust = 10;
+    public float standardThrust = 4;
     private float thrust = 0;
 
     // Use this for initialization
@@ -22,13 +22,14 @@ public class PushObjects : MonoBehaviour {
 
     void PushColliders()
     {
-        //activate enemies
+        // go through contained other entities in collider
         foreach (Collider collider in triggerList)
         {
             Rigidbody rigidBody = collider.gameObject.GetComponent<Rigidbody>();
             if (rigidBody)
             {
-                rigidBody.AddForce(transform.up * thrust * 10);
+                print("Force thrust " + thrust);
+                rigidBody.AddForce(transform.forward * thrust * 100);
             }
         }
     }
