@@ -6,11 +6,10 @@ o Collider unterhalb Stufen
 o Splash and Ending Screen (Splash only im Build)
 o Disable all sounds (wenn dann alles)
 o Piston: lock movement while on piston (works with new controls)
-Not DONE: Pistonmesh einbauen (mesh fehlt! base prefab ist direkt im ordner)
-NOT DONE: Infofenster zum Ausklappen (Mauszeiger ist ja gelockt)
+o Pistonmesh einbauen und Prefab erzeugen
+o Stiege in Lv02 einbauen
 
 Lukas:
 Piston Mesh überarbeiten (UV?)
 Level03 (Pistons und Würfel)
 
-Hauptmenü
