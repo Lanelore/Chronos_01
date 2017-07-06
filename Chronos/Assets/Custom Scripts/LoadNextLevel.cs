@@ -29,7 +29,8 @@ public class LoadNextLevel : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-            if (nextScene <= SceneManager.sceneCount)
+            print("nextScene " + nextScene + ", sceneCount " + SceneManager.sceneCountInBuildSettings);
+            if (nextScene < SceneManager.sceneCountInBuildSettings)
             {
                 SceneManager.LoadScene(nextScene);
             }
