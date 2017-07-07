@@ -10,6 +10,6 @@ o Pistonmesh einbauen und Prefab erzeugen
 o Stiege in Lv02 einbauen
 
 Lukas:
-Piston Mesh überarbeiten (UV?)
+
 Level03 (Pistons und Würfel)
 
