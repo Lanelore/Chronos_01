@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 495}
   m_MaxSize: {x: 14004, y: 14045}
   vertical: 0
-  controlID: 14130
+  controlID: 34795
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 495}
   m_MaxSize: {x: 10002, y: 14045}
   vertical: 1
-  controlID: 14131
+  controlID: 34796
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 14132
+  controlID: 34797
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,10 +367,10 @@ MonoBehaviour:
     width: 253
     height: 646
   m_TreeViewState:
-    scrollPos: {x: 0, y: 523}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 66f2ffff68f2ffff04f3ffff06f3ffffe4fbffff000000009e3200005a330000f6330000
+    scrollPos: {x: 0, y: 4816}
+    m_SelectedIDs: 6287fcff
+    m_LastClickedID: -227486
+    m_ExpandedIDs: 22f2ffff24f2ffffb2f9ffffbafaffffe4fbffff000000009e3200006633000008340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -420,14 +420,14 @@ MonoBehaviour:
     width: 1246
     height: 646
   m_SceneLighting: 1
-  lastFramingTime: 2528.853646513219
+  lastFramingTime: 7322.035620392628
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -20.392532, y: 3.9139588, z: 8.489736}
+    m_Target: {x: -58.617188, y: 13.86084, z: 7.8828125}
     speed: 2
-    m_Value: {x: -20.392532, y: 3.9139588, z: 8.489736}
+    m_Value: {x: -58.617188, y: 13.86084, z: 7.8828125}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -450,17 +450,17 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.009071685, y: -0.9859911, z: 0.15543146, w: -0.060519278}
+    m_Target: {x: 0.0894415, y: -0.89057, z: 0.19835113, w: 0.39957845}
     speed: 2
-    m_Value: {x: -0.009071312, y: -0.9859506, z: 0.15542507, w: -0.06051679}
+    m_Value: {x: 0.08943611, y: -0.8905163, z: 0.19833916, w: 0.39955434}
   m_Size:
-    m_Target: 41.202156
+    m_Target: 24.61368
     speed: 2
-    m_Value: 41.202156
+    m_Value: 24.61368
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_LastSceneViewRotation: {x: -0.12504965, y: 0.7442113, z: -0.14456077, w: -0.64001113}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
@@ -577,19 +577,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Materials/Metal_Copper
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Materials/Metal_Copper
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Luki\Documents\GitHub\Chronos_01\Chronos
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 111}
-    m_SelectedIDs: 12290000
-    m_LastClickedID: 10514
-    m_ExpandedIDs: 0000000012290000ae290000b2290000c2290000d0290000642a0000682b0000022c0000062c00000a2c0000a22c0000dc2c00006c2d0000aa2e0000d22e00006a300000f630000084310000ca310000d4310000be3c0000c03c0000c23c0000c43c0000c63c0000c83c0000ca3c0000cc3c0000ce3c0000d03c0000d23c0000d43c0000d63c0000d83c0000da3c0000dc3c0000de3c0000e03c0000e23c0000e43c0000e63c0000e83c0000ea3c0000ec3c0000ee3c000000ca9a3bffffff7f
+    m_SelectedIDs: 5c2f0000
+    m_LastClickedID: 12124
+    m_ExpandedIDs: 0000000012290000ae290000b2290000c2290000d0290000642a0000682b0000022c0000062c00000a2c0000a22c0000dc2c00006c2d0000aa2e0000d22e00006a300000f630000084310000ca310000d4310000d63c0000d83c0000da3c0000dc3c0000de3c0000e03c0000e23c0000e43c0000e63c0000e83c0000ea3c0000ec3c0000ee3c0000f03c0000f23c0000f43c0000f63c0000f83c0000fa3c0000fc3c0000fe3c0000003d0000023d0000043d0000063d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -617,7 +617,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000012290000ae290000b2290000c2290000d0290000642a0000682b0000022c0000062c00000a2c0000a22c0000dc2c00006c2d0000aa2e0000d22e00006a300000f630000084310000ca310000d4310000be3c0000c03c0000c23c0000c43c0000c63c0000c83c0000ca3c0000cc3c0000ce3c0000d03c0000d23c0000d43c0000d63c0000d83c0000da3c0000dc3c0000de3c0000e03c0000e23c0000e43c0000e63c0000e83c0000ea3c0000ec3c0000ee3c000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000012290000ae290000b2290000c2290000d0290000642a0000682b0000022c0000062c00000a2c0000a22c0000dc2c00006c2d0000aa2e0000d22e00006a300000f630000084310000ca310000d4310000d63c0000d83c0000da3c0000dc3c0000de3c0000e03c0000e23c0000e43c0000e63c0000e83c0000ea3c0000ec3c0000ee3c0000f03c0000f23c0000f43c0000f63c0000f83c0000fa3c0000fc3c0000fe3c0000003d0000023d0000043d0000063d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
